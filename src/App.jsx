@@ -9,7 +9,7 @@ import { useEffect } from "react"
 import { toast } from "react-toastify"
 
 function App() {
-	const [courses, setCourses] = useState([]) //INSTEAD OF NULL WE USE EMPTY ARRAY []
+	const [courses, setCourses] = useState(null) //INSTEAD OF NULL WE USE EMPTY ARRAY []
 	const [loading, setLoading] = useState(true)
 	async function fetchData() {
 		setLoading(true)
