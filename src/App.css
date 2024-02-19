@@ -124,6 +124,29 @@ img {
 	object-fit: cover;
 }
 
+.course-img {
+	position: relative;
+}
+
+.like-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 85%;
+	top: 90%;
+	/* font-size: 2vw; */
+}
+
+.like-icon > button {
+	width: 2.5vw;
+	height: 5vh;
+	border-radius: 50%;
+}
+.like-icon > button > .like {
+	font-size: 1.5vw;
+}
+
 .card-container {
 	display: flex;
 	justify-content: center;
@@ -133,6 +156,7 @@ img {
 	border-radius: 0.5vw;
 	box-shadow: 0 1vw 0.8vw rgba(0, 0, 0, 0.5);
 	transition: all 0.2s ease;
+	overflow: hidden;
 }
 
 .card-container:hover {

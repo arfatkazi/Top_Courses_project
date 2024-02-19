@@ -7,12 +7,11 @@ const Card = ({ course }) => {
 			<div className="card-container">
 				<div className="course-img">
 					<img src={course.image.url}></img>
-				</div>
-
-				<div>
-					<button>
-						<FcLike className="like-icon"></FcLike>
-					</button>
+					<div className="like-icon">
+						<button>
+							<FcLike className="like"></FcLike>
+						</button>
+					</div>
 				</div>
 
 				<div className="course-details">
