@@ -16,16 +16,11 @@ export const filterData = [
 
 	{
 		id: "4",
-		title: "Trading",
-	},
-
-	{
-		id: "5",
 		title: "Design",
 	},
 
 	{
-		id: "6",
+		id: "5",
 		title: "Lifestyle",
 	},
 ]

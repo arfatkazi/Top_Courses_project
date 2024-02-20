@@ -1,8 +1,11 @@
-const Filter = ({ filterData }) => {
-	// const filtersHandler = () => {}
+const Filter = ({ filterData, category, setCategory }) => {
 	const filterHandler = (e) => {
 		console.log(`clicked`)
 		console.log(e.target)
+	}
+
+	const filtersClickHandler = (title) => {
+		setCategory(title)
 	}
 	return (
 		<>
@@ -14,7 +17,7 @@ const Filter = ({ filterData }) => {
 					return (
 						<button
 							key={data.id}
-							// onClick={filtersHandler}
+							onClick={() => filtersClickHandler(data.title)}
 						>
 							{data.title}
 						</button>

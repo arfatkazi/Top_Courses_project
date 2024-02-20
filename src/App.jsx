@@ -11,6 +11,7 @@ import { toast } from "react-toastify"
 function App() {
 	const [courses, setCourses] = useState(null) //INSTEAD OF NULL WE USE EMPTY ARRAY []
 	const [loading, setLoading] = useState(true)
+	const [category, setCategory] = useState(filterData[0].title)
 	async function fetchData() {
 		setLoading(true)
 		try {
@@ -33,10 +34,23 @@ function App() {
 					<Navbar></Navbar>
 				</div>
 				<div>
-					<Filter filterData={filterData}></Filter>
+					<Filter
+						filterData={filterData}
+						category={category}
+						setCategory={setCategory}
+					></Filter>
 				</div>
 
-				<div>{loading ? <Spinner /> : <Cards courses={courses} />}</div>
+				<div>
+					{loading ? (
+						<Spinner />
+					) : (
+						<Cards
+							courses={courses}
+							category={category}
+						/>
+					)}
+				</div>
 			</div>
 		</>
 	)

@@ -1,19 +1,23 @@
 import { useState } from "react"
 import Card from "./Card"
 
-const Cards = ({ courses }) => {
+const Cards = ({ courses, category }) => {
 	let [likedCourses, setLikedCourses] = useState([])
 	console.log(`printing courses`)
 	console.log(courses)
 
 	const getCourses = () => {
-		let allCourses = []
-		Object.values(courses).forEach((courseCategory) => {
-			courseCategory.forEach((course) => {
-				allCourses.push(course)
+		if (category === "All") {
+			let allCourses = []
+			Object.values(courses).forEach((courseCategory) => {
+				courseCategory.forEach((course) => {
+					allCourses.push(course)
+				})
 			})
-		})
-		return allCourses
+			return allCourses
+		} else {
+			return courses[category]
+		}
 	}
 	return (
 		<>
