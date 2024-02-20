@@ -1,6 +1,8 @@
+import { useState } from "react"
 import Card from "./Card"
 
 const Cards = ({ courses }) => {
+	let [likedCourses, setLikedCourses] = useState([])
 	console.log(`printing courses`)
 	console.log(courses)
 
@@ -21,6 +23,8 @@ const Cards = ({ courses }) => {
 						<Card
 							key={course.id}
 							course={course}
+							likedCourses={likedCourses}
+							setLikedCourses={setLikedCourses}
 						></Card>
 					)
 				})}

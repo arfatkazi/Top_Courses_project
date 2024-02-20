@@ -1,4 +1,5 @@
 const Filter = ({ filterData }) => {
+	// const filtersHandler = () => {}
 	const filterHandler = (e) => {
 		console.log(`clicked`)
 		console.log(e.target)
@@ -10,7 +11,14 @@ const Filter = ({ filterData }) => {
 				onClick={filterHandler}
 			>
 				{filterData.map((data) => {
-					return <button key={data.id}>{data.title}</button>
+					return (
+						<button
+							key={data.id}
+							// onClick={filtersHandler}
+						>
+							{data.title}
+						</button>
+					)
 				})}
 			</div>
 		</>
