@@ -19,15 +19,6 @@ function App() {
 			let output = await response.json()
 			setCourses(output.data)
 		} catch (error) {
-			if (response !== apiUrl) {
-				return (
-					<>
-						<div>
-							<h1>ERROR</h1>
-						</div>
-					</>
-				)
-			}
 			toast.error("Network Problem")
 		}
 		setLoading(false)
